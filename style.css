@@ -1,0 +1,344 @@
+/* Here is the font for logo */
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Khand:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+
+/* HERE IS THE FONT FOR NAVBAR */
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Khand:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7efd8;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #f7efd8;
+  padding: 10px 20px;
+}
+.logo {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  color: #9e744a;
+}
+.logo strong {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+  color: blueviolet;
+}
+.links {
+  list-style: none;
+  display: flex;
+}
+.links li a {
+  text-decoration: none;
+  margin-left: 50px;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 22px;
+}
+li a:hover {
+  color: blueviolet;
+  transition: color 0.3s ease;
+}
+.login-btn {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 12px;
+  background-color: blueviolet;
+  border-radius: 9px;
+  outline: none;
+}
+
+/* our hero page is started here */
+main {
+  height: 100%;
+  margin-bottom: 12px;
+  background-color: #f7efd8;
+}
+.grid-container {
+  background-color: #f7efd8;
+
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+.hero-text {
+  display: block;
+  margin-left: 50px;
+}
+.hero-text p {
+  font-family: "Crimson Text", serif;
+  font-size: 32px;
+  line-break: normal;
+  line-height: 45px;
+  margin-bottom: 25px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.hero-text a:hover {
+  opacity: 0.8;
+}
+.hero-text h2 {
+  font-family: "DM Sans", sans-serif;
+  color: black;
+  font-size: 62px;
+  font-style: normal;
+  line-height: 1.7;
+}
+.hero-text strong {
+  font-family: "DM Sans", sans-serif;
+  color: blueviolet;
+  font-size: 62px;
+  font-style: normal;
+}
+.image-cont img {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Here is the code for the About section */
+
+.box-abt-me {
+  display: flex;
+  max-width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  column-gap: 15px;
+  background-color: #f7efd8;
+}
+.abt-image {
+  max-width: 43%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7efd8;
+}
+.abt-image img {
+  width: 87%;
+}
+.myself {
+  width: 55%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7efd8;
+}
+.myself .abt-myself {
+  font-family: "DM Sans", sans-serif;
+  color: blueviolet;
+  font-size: 62px;
+  font-style: normal;
+  line-height: 1.7;
+}
+.myself .intro-myself {
+  font-family: "Crimson Text", serif;
+  font-size: 28px;
+  line-break: normal;
+  line-height: 40px;
+  margin-bottom: 25px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.social-media .fa {
+  padding: 8px;
+  font-size: 35px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.social-media .fa-github {
+  font-size: 35px;
+  padding: 8px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: black;
+}
+.fa-instagram {
+  background: white;
+  color: red;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.technology-list {
+  margin-top: 50px;
+}
+.technology-title h2 {
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: blueviolet;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+.list-programming {
+  display: flex;
+  margin: 0 auto;
+}
+.list-programming img {
+  width: 100px;
+  height: auto;
+}
+.list-programming strong {
+  font-size: 22px;
+  color: black;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.python-logo {
+  width: 30%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.javascript-logo,
+.java-logo,
+.html-logo,
+.css-logo {
+  width: 30%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  column-gap: 10px;
+}
+.python-logo img {
+  width: 20%;
+}
+.javascript-logo img,
+.java-logo img,
+.html-logo img,
+.css-logo img {
+  width: 20%;
+}
+
+/* this is for the card for blog post */
+.blog-post {
+  margin-top: 80px;
+  background-color: #f7efd8;
+}
+.blog-card {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  gap: 25px;
+}
+.first-flex,
+.second-flex,
+.third-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 13px; /* Space between items inside the card */
+  padding: 20px;
+}
+.first-image,
+.second-image,
+.third-image {
+  width: 100%;
+}
+
+.first-image img {
+  width: 100%;
+  display: inline-block;
+
+  transition: transform 0.5s ease;
+}
+.second-flex img {
+  width: 100%;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+.third-flex img {
+  width: 100%;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+.first-flex h2,
+.second-flex h2,
+.third-flex h2 {
+  display: block;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.first-flex img:hover,
+.second-flex img:hover,
+.third-flex img:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
+.first-flex p,
+.second-flex p,
+.third-flex p {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+}
+.first-flex .button-detail a,
+.second-flex .button-detail a,
+.third-flex .button-detail a {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: blueviolet;
+  border-radius: 9px;
+  outline: none;
+  margin-left: 20px;
+  padding: 4px;
+  margin-bottom: 100%;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.first-flex .button-detail a:hover,
+.second-flex .button-detail a:hover,
+.third-flex .button-detail a:hover {
+  opacity: 0.8;
+}
+.first-flex h2,
+.second-flex h2,
+.third-flex h2 {
+  margin-bottom: 10px;
+}
+.first-flex p,
+.second-flex p {
+  margin-bottom: 20px;
+}
+.first-flex,
+.second-flex,
+.third-flex {
+  border-bottom: 2px solid blueviolet;
+}
