@@ -4,6 +4,26 @@
 /* HERE IS THE FONT FOR NAVBAR */
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Khand:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* for the animation each page i have added the
+animate on scroll property 
+on  each section in html tag in section tag to make changes */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State when the element is in view */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +87,7 @@ li a:hover {
 }
 
 /* our hero page is started here */
+
 main {
   height: 100%;
   margin-bottom: 12px;
@@ -74,13 +95,13 @@ main {
 }
 .grid-container {
   background-color: #f7efd8;
-
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 30px;
 }
+
 .hero-text {
   display: block;
   margin-left: 50px;
@@ -103,6 +124,7 @@ main {
   font-size: 62px;
   font-style: normal;
   line-height: 1.7;
+  animation: fade-in 1s forwards;
 }
 .hero-text strong {
   font-family: "DM Sans", sans-serif;
@@ -248,15 +270,15 @@ main {
 .blog-post {
   margin-top: 80px;
   background-color: #f7efd8;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 .blog-card {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  gap: 25px;
+  width: 90%;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   margin: 0 auto;
 }
 .first-flex,
@@ -264,8 +286,8 @@ main {
 .third-flex {
   display: flex;
   flex-direction: column;
-  gap: 13px; /* Space between items inside the card */
   padding: 20px;
+  gap: 13px; /* Space between items inside the card */
 }
 .first-image,
 .second-image,
@@ -296,6 +318,11 @@ main {
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+.third-flex{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
 .first-flex h2,
 .second-flex h2,
 .third-flex h2 {
@@ -310,12 +337,7 @@ main {
   opacity: 0.8;
   transform: scale(0.9);
 }
-.first-flex p,
-.second-flex p,
-.third-flex p {
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
-}
+
 .first-flex .button-detail a,
 .second-flex .button-detail a,
 .third-flex .button-detail a {
@@ -329,9 +351,10 @@ main {
   outline: none;
   margin-left: 20px;
   padding: 10px;
-  margin-bottom: 100%;
-  letter-spacing: 2px;
   margin-top: 23px;
+  display: block;
+  align-items: center;
+  text-align: center;
 }
 .first-flex .button-detail a:hover,
 .second-flex .button-detail a:hover,
@@ -356,6 +379,7 @@ main {
 .timeline {
   position: relative;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Timeline line  */
@@ -430,7 +454,6 @@ main {
   border-color: transparent blueviolet transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
   left: -16px;
 }
@@ -454,12 +477,13 @@ main {
 .contact {
   width: auto;
   margin-top: 148px;
+  background-color: #f7efd8;
 }
 .contact-container {
   width: 100%;
   box-shadow: 20px red;
   display: grid;
-  background-color: white;
+  background-color: #f7efd8;
   gap: 10%;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -473,6 +497,7 @@ main {
   align-items: center;
   text-align: center;
   column-gap: 30px;
+  background-color: #f7efd8;
 }
 .social-media2 .fa {
   padding: 8px;
@@ -495,6 +520,7 @@ main {
   background: #007bb5;
   color: black;
 }
+
 .sign-in strong {
   margin-bottom: 20px;
   font-family: sans-serif;
@@ -573,10 +599,33 @@ main {
   font-weight: 700;
   padding: 15px;
   width: 30%;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   border: 1px solid white;
   font-family: "DM Sans", sans-serif;
 }
 .content-items a:hover {
   opacity: 0.8;
+}
+
+/* here is the code for the footer */
+footer {
+  margin-top: 90px;
+}
+.site-footer {
+  background-color: #f7efd8;
+  border-top: 2px solid black;
+  color: black;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+}
+.site-footer .fooer-content {
+  margin-bottom: 20px;
+}
+
+.site-footer .footer-copy {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
 }

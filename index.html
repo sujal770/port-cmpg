@@ -26,14 +26,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    
     <link rel="stylesheet" href="style.css" />
   </head>
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+       
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1 // Adjust this value based on how much of the item should be visible before the animation triggers
+  });
+
+  // Target all elements you want to animate
+  document.querySelectorAll('.animate-on-scroll').forEach((item) => {
+    observer.observe(item);
+  });
+});
+
+  </script>
   <body>
     <!-- This is the section for the navbar and logo element-->
     <nav class="navbar">
-      <div class="logo">Sujal <strong>Upadhyay</strong></div>
+      <div class="logo animate-on-scroll">Sujal <strong>Upadhyay</strong></div>
       <ul class="links">
         <li><a href="#">Home</a></li>
         <li><a href="#about-me">About</a></li>
@@ -42,7 +67,7 @@
       </ul>
       <!--
       <a href="#" class="login-btn">Project</a> -->
-      <div class="social-media2">   
+      <div class="social-media2 animate-on-scroll">   
         <a
           href="www.linkedin.com/in/sujal-upadhyay"
           class="fa fa-linkedin"
@@ -58,8 +83,8 @@
     with its html elements-->
 
     <main>
-      <div class="grid-container">
-        <div class="hero-text">
+      <div class="grid-container animate-on-scroll">
+        <div class="hero-text animate-on-scroll">
           <h2>Hello, I am <strong>Web Developer.</strong></h2>
           <p>
             I am both a student and a programmer, continuously enhancing my
@@ -70,7 +95,7 @@
           </p>
           <a href="#" class="login-btn">Download CV</a>
         </div>
-        <div class="image-cont">
+        <div class="image-cont animate-on-scroll">
           <img src="tla.png" />
         </div>
       </div>
@@ -79,14 +104,14 @@
    about me section with its html elements 
     -->
 
-    <section class="abt-me second-section" id="about-me">
+    <section class="abt-me second-section animate-on-scroll" id="about-me">
       <div class="box-abt-me animate__animated animate__headShake">
-        <div class="abt-image">
+        <div class="abt-image animate-on-scroll">
           <img src="suj-1.png" alt="my-photo" />
         </div>
         <div class="myself">
-          <h2 class="abt-myself">ABOUT</h2>
-          <p class="intro-myself">
+          <h2 class="abt-myself animate-on-scroll">ABOUT</h2>
+          <p class="intro-myself animate-on-scroll">
             Hello, my name is Sujal. I have been performing as a back-end and front-end web developer for 1 years 
             and am still in the process of gaining more experiences through more years. I'm studying a bachelor’s 
             degree in Software engineering. Some effective on-job training make me more skilled in this field to 
@@ -105,7 +130,7 @@
     </section>
 
     <!-- This is the section for the technology list-->
-    <section class="technology-list">
+    <section class="technology-list animate-on-scroll">
       <div class="technology-title">
         <h2>Technologies l've been working with recently</h2>
       </div>
@@ -138,16 +163,14 @@
     </section>
 
     <!--  This is the section for the blog post card-->
-    <section class="blog-post" id="blog">
+    <section class="blog-post animate-on-scroll" id="blog">
       <div class="blog-card"><!-- this is for flex-->
         <div class="first-flex">
           <div class="first-image">
-          <img src="tkinter.jpg" alt="media">
+          <img src="tkinter.jpg" alt="media" style="width:100%">
              </div>
           <h2>Arduino(Ir Remote)</h2>
-          <p>This is the Project which i have done using 
-            the Ir remote and this is the basic project.
-          </p>
+         
           <div class="button-detail">
             <a href="#">Detail</a>
           </div>
@@ -156,15 +179,10 @@
         <!--- this is for second-->
         <div class="second-flex">
           <div class="second-image">
-          <img src="ecommerce.jpg" alt="media">
+          <img src="ecommerce.jpg" alt="media" style="width:100%">
         </div>
           <h2>E-commerce website</h2>
-          <p>This is the website i have designed for the 
-            furniture sale and user can experience the best
-            Ui/Ux design.
-
-          
-          </p>
+         
           <div class="button-detail">
             <a href="#">Detail</a>
           </div>
@@ -172,22 +190,19 @@
         <!-- this is for the third card-->
         <div class="third-flex">
           <div class="third-image">
-          <img src="tkinter.jpg" alt="media">
+          <img src="tkinter.jpg" alt="media" style="width:100%">
         </div>
-          <h2>Java (File handling)</h2>
-          <p>This software is best for storing the data of
-            employee in a company and deducing the percentage
-            as per tax and working hours.
-          </p>
-          <div class="button-detail">
+        <h2>Arduino(Ir Remote)</h2>
+       
+        <div class="button-detail">
           <a href="#">Detail</a>
-           </div>
+        </div>
           </div>
     </div>
 
     </section>
     <!-- This is for the timeline where i have set the time period where i am working on-->
-    <section class="timeline">
+    <section class="timeline animate-on-scroll">
       <div class="container left">
         <div class="content">
           <h2>2019</h2>
@@ -252,7 +267,7 @@
             </div>
           </div>
 
-          <div class="container left">
+          <div class="container left ">
             <div class="content">
               <h2>2022</h2>
               <p>In 2022, At the end of high school i learned the concept of C,MySQl and
@@ -265,7 +280,7 @@
           </div>
 
           <div class="container right">
-            <div class="content">
+            <div class="content ">
               <h2>2023</h2>
               <p>In 2023, I was hoping to get excellent graduation from the top notch college 
                 with some hope of field job.So that i can work with canadian experience where
@@ -282,20 +297,11 @@
 
     <!-- This is the contact page for the website-->
 
-    <section class="contact" id="contact">
+    <section class="contact animate-on-scroll" id="contact">
       <div class="contact-container"> <!-- use it for grid-->
         <div class="sign-in"> <!-- use it for flex-->
           <h2>Sign In</h2>
-          <div class="social-media2">   
-            <a
-              href="www.linkedin.com/in/sujal-upadhyay"
-              class="fa fa-linkedin"
-            ></a>
-            <a
-            href="https://github.com/sujal770"
-            class="fa fa-github"
-          ></a>
-          </div>
+         
           <strong> OR use your account</strong>
           <input type="email" placeholder="Email" required><br>
           <input type="password" placeholder="Password" required><br>
@@ -314,6 +320,18 @@
     </div>
     </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>About me</p>
+        <p>I'm a passionate web debeloper specializing in creating beautiful and functional websites.Feel free to reach out or follow me on social media</p>
+
+      </div>
+
+      <div class="footer-copy">
+        © 2024 Sujal upadhyay. All rights reserved.
+      </div>
+    </footer>
 
 
 
