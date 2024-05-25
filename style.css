@@ -608,24 +608,81 @@ main {
 }
 
 /* here is the code for the footer */
-footer {
-  margin-top: 90px;
+
+footer{
+  height: 50%;
+  width: 100%;
+  margin-top: 8%;
 }
-.site-footer {
-  background-color: #f7efd8;
+.footer-info{
   border-top: 2px solid black;
-  color: black;
-  text-align: center;
-  padding: 20px 0px;
-  font-size: 15px;
-  font-family: "DM Sans", sans-serif;
+  padding: 80px;
 }
-.site-footer .fooer-content {
-  margin-bottom: 20px;
+.footer-subinfo{
+
+  display: flex;
+  flex-direction: row;
+  gap: 103px;
+
+
+}
+.info-text,.getting-text,.resources-text,.newsletter{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.info-text h2,.getting-text h2,.resources-text h2,.newsletter h2{
+  font-family: "DM Sans", sans-serif;
+
+}
+.info-text a,.getting-text a,.resources-text a,.newsletter a{
+font-family: "Crimson Text", serif;
+text-decoration: none;
+font-size: 19px;
+color: black;
+font-weight: 600;
 }
 
-.site-footer .footer-copy {
-  margin-top: 20px;
-  font-size: 15px;
-  font-family: "DM Sans", sans-serif;
+
+.getting-text h2{
+  white-space: nowrap;
+
+}
+.newsletter p{
+  font-family: "Crimson Text", serif;
+  text-align: left;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.social-media .fa {
+  padding: 8px;
+  font-size: 35px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.social-media-footer .fa-github {
+  font-size: 35px;
+  padding: 8px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: black;
+}
+.fa-instagram {
+  background: white;
+  color: red;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
